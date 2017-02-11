@@ -6,6 +6,7 @@ import (
 
 	"github.com/buro9/funcs/inspect"
 	"github.com/buro9/funcs/safe"
+	"github.com/buro9/funcs/transform"
 )
 
 // Map is a `template.FuncMap` containing all of the funcs within the child
@@ -18,6 +19,7 @@ func init() {
 		// String manipulation
 		"lower": strings.ToLower,
 		"title": strings.Title,
+		"trunc": transform.Trunc,
 		"upper": strings.ToUpper,
 
 		// Trusted content
