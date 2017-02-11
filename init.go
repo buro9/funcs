@@ -4,7 +4,8 @@ import (
 	"html/template"
 	"strings"
 
-	"github.com/buro9/funcs/check"
+	"github.com/buro9/funcs/inspect"
+	"github.com/buro9/funcs/safe"
 )
 
 // Map is a `template.FuncMap` containing all of the funcs within the child
@@ -19,7 +20,14 @@ func init() {
 		"title": strings.Title,
 		"upper": strings.ToUpper,
 
+		// Trusted content
+		"safeCSS":      safe.CSS,
+		"safeHTML":     safe.HTML,
+		"safeHTMLAttr": safe.HTMLAttr,
+		"safeJS":       safe.JS,
+		"safeURL":      safe.URL,
+
 		// Check vars and returns boolean answer to questions about their state
-		"isNil": check.IsNil,
+		"isNil": inspect.IsNil,
 	}
 }
