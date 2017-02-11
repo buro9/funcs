@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"strings"
 
+	"github.com/buro9/funcs/general"
 	"github.com/buro9/funcs/inspect"
 	"github.com/buro9/funcs/math"
 	"github.com/buro9/funcs/safe"
@@ -16,6 +17,8 @@ var Map template.FuncMap
 
 func init() {
 	Map = template.FuncMap{
+		// General
+		"default": general.Default,
 
 		// String manipulation
 		"lower":       strings.ToLower,
