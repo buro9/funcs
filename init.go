@@ -17,10 +17,11 @@ var Map template.FuncMap
 
 func init() {
 	Map = template.FuncMap{
-		// General
+		// General utilities
 		"default": general.Default,
 
-		// String manipulation
+		// Transformation and generation
+		"dict":        transform.Dictionary,
 		"lower":       strings.ToLower,
 		"naturalTime": transform.NaturalTime,
 		"numcomma":    transform.NumComma,
@@ -29,17 +30,17 @@ func init() {
 		"trunc":       transform.Trunc,
 		"upper":       strings.ToUpper,
 
-		// Math
+		// Math functions
 		"subtract": math.Subtract,
 
-		// Trusted content
+		// Trusting content
 		"safeCSS":      safe.CSS,
 		"safeHTML":     safe.HTML,
 		"safeHTMLAttr": safe.HTMLAttr,
 		"safeJS":       safe.JS,
 		"safeURL":      safe.URL,
 
-		// Check vars and returns boolean answer to questions about their state
+		// Inspect your data
 		"hasField": inspect.HasField,
 		"in":       inspect.In,
 		"isNil":    inspect.IsNil,
