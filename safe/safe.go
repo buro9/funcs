@@ -1,3 +1,8 @@
+// safe provides funcs that will allow trusted content into a template without
+// being escaped.
+//
+// Portions Copyright The Hugo Authors and covered by both an MIT license for
+// the original code, and an Apache license for later modifications
 package safe
 
 import (
