@@ -3,9 +3,9 @@ package check
 import "reflect"
 
 // IsNil returns true if the provided variable is nil
-func IsNil(v interface{}) (isNil bool) {
-	if isNil = (v == nil); isNil {
-		return
+func IsNil(v interface{}) bool {
+	if v == nil {
+		return true
 	}
 
 	vo := reflect.ValueOf(v)
@@ -13,8 +13,10 @@ func IsNil(v interface{}) (isNil bool) {
 	case reflect.String:
 		// always ok
 	default:
-		isNil = vo.IsNil()
+		if vo.IsNil() || !vo.IsValid() {
+			return true
+		}
 	}
 
-	return
+	return false
 }

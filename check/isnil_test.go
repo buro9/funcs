@@ -22,7 +22,8 @@ func TestIsNil(t *testing.T) {
 	assert.True(t, IsNil(m["other"]))
 
 	var tm *time.Time
-	assert.True(t, IsNil(&tm))
+	assert.True(t, IsNil(tm))
+
 	now := time.Now()
 	tm = &now
 	assert.False(t, IsNil(&tm))
