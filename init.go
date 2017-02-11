@@ -40,8 +40,9 @@ func init() {
 		"safeURL":      safe.URL,
 
 		// Check vars and returns boolean answer to questions about their state
+		"hasField": inspect.HasField,
+		"in":       inspect.In,
 		"isNil":    inspect.IsNil,
 		"isSet":    inspect.IsSet,
-		"hasField": inspect.HasField,
 	}
 }
