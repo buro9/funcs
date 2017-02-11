@@ -1,8 +1,9 @@
-// safe provides funcs that will allow trusted content into a template without
+// Package safe provides funcs that will allow trusted content into a template without
 // being escaped.
 //
 // Portions Copyright The Hugo Authors and covered by both an MIT license for
-// the original code, and an Apache license for later modifications
+// the original code, and an Apache license for later modifications.
+// https://github.com/spf13/hugo/blob/master/tpl/template_funcs.go
 package safe
 
 import (

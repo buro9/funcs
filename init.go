@@ -29,5 +29,6 @@ func init() {
 
 		// Check vars and returns boolean answer to questions about their state
 		"isNil": inspect.IsNil,
+		"isSet": inspect.IsSet,
 	}
 }
