@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/buro9/funcs/inspect"
+	"github.com/buro9/funcs/math"
 	"github.com/buro9/funcs/safe"
 	"github.com/buro9/funcs/transform"
 )
@@ -24,6 +25,9 @@ func init() {
 		"title":       strings.Title,
 		"trunc":       transform.Trunc,
 		"upper":       strings.ToUpper,
+
+		// Math
+		"subtract": math.Subtract,
 
 		// Trusted content
 		"safeCSS":      safe.CSS,
