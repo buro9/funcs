@@ -17,10 +17,13 @@ func init() {
 	Map = template.FuncMap{
 
 		// String manipulation
-		"lower": strings.ToLower,
-		"title": strings.Title,
-		"trunc": transform.Trunc,
-		"upper": strings.ToUpper,
+		"lower":       strings.ToLower,
+		"naturalTime": transform.NaturalTime,
+		"numcomma":    transform.NumComma,
+		"rfcTime":     transform.RFCTime,
+		"title":       strings.Title,
+		"trunc":       transform.Trunc,
+		"upper":       strings.ToUpper,
 
 		// Trusted content
 		"safeCSS":      safe.CSS,
@@ -30,7 +33,8 @@ func init() {
 		"safeURL":      safe.URL,
 
 		// Check vars and returns boolean answer to questions about their state
-		"isNil": inspect.IsNil,
-		"isSet": inspect.IsSet,
+		"isNil":    inspect.IsNil,
+		"isSet":    inspect.IsSet,
+		"hasField": inspect.HasField,
 	}
 }
